@@ -1,0 +1,29 @@
+body {
+    background-color: #d9ddd7;
+    font-family: Verdana;
+}
+
+.titel {
+    color: #346e43;
+}
+
+p {
+    background-color: #6a7689;
+    color: white;
+    padding: 20px;
+}
+
+.highlight{
+    color: yellow;
+    border: 2px solid;
+    margin: 0 20% 0 20%;
+    text-align: center;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: #6df469;
+}
