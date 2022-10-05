@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Robbe van Hoppe</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <style>
+        #banner {
+            background-image: url(https://picsum.photos/2000/250);
+            background-size: cover;
+            height: 250px;
+        }
+
+        #welkomtekst {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+        #gansePagina{
+            /* tijdelijk */
+            height: 1920px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-dark" id="gansePagina">
+        <!-- container met de nav bar -->
+        <div class="container">
+
+        </div>
+
+        <!-- container met de banner -->
+        <div class="container-fluid">
+
+            <div class="row p-4" id="banner">
+                <div class="col py-5 bg-light bg-opacity-25 rounded-top">
+                    <h1 class="display-1 text-center text-dark" id="welkomtekst">Welkom Kut</h1>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Container met de projecten -->
+        <div class="container-fluid bg-dark bg-opacity-50">
+            <div class="row p-2">
+                <h1 class="display-2 text-left text-light px-5">Eigen Projecten</h1>
+            </div>
+            <div class="row p-5  d-none d-lg-flex">
+                <div class="col-4 sm p-2">
+                    <div class="card mb-3">
+                        <img src="https://picsum.photos/150/70" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom border-1 border-dark p-2">Proxmox</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-3 p-2">
+                        <img src="https://picsum.photos/200/140" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom border-1 border-dark p-2">SonarQube</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mb-3 p-2">
+                        <img src="https://picsum.photos/150/70" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title border-bottom border-1 border-dark p-2">Wijnen</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
