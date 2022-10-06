@@ -1,6 +1,6 @@
 # WebEssentials_22-23
 
-## Repo voor alle lessen van web essentials.
+Repo voor alle lessen van web essentials.
 
 
 
