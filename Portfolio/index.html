@@ -23,7 +23,8 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
         }
-        #gansePagina{
+
+        #gansePagina {
             /* tijdelijk */
             height: 1920px;
         }
@@ -33,10 +34,38 @@
 
 <body>
     <div class="bg-dark" id="gansePagina">
-        <!-- container met de nav bar -->
-        <div class="container">
 
-        </div>
+        <!-- container met de nav bar -->
+        <nav class="navbar navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light" href="#">
+                    <img src="https://svg.link/800/600/bbdefb/673ab7/100" alt="Logo" width="30" height="24"
+                        class="d-inline-block align-text-top">
+                    Bootstrap
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-light" href="https://www.linkedin.com/in/robbe-van-hoppe-18b685244/">LinkedIn</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
 
         <!-- container met de banner -->
         <div class="container-fluid">
@@ -50,13 +79,14 @@
         </div>
 
         <!-- Container met de projecten -->
-        <div class="container-fluid bg-dark bg-opacity-50">
+        <!-- Dus, de cards worden op mobile onder elkaar geschikt in andere, langere cards (langere cards nog maken) -->
+        <div class="container-fluid bg-dark bg-opacity-50 shadow-lg">
             <div class="row p-2">
                 <h1 class="display-2 text-left text-light px-5">Eigen Projecten</h1>
             </div>
-            <div class="row p-5  d-none d-lg-flex">
-                <div class="col-4 sm p-2">
-                    <div class="card mb-3">
+            <div class="row p-5 d-none d-lg-flex">
+                <div class="col-4 sm">
+                    <div class="card mb-3 p-2">
                         <img src="https://picsum.photos/150/70" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title border-bottom border-1 border-dark p-2">Proxmox</h5>
@@ -91,6 +121,29 @@
             </div>
 
 
+        </div>
+
+        <div class="container-fluid">
+            <div class="row bg-light justify-content-around">
+                <div class="col-3 border border-2">
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo,
+                        inventore! Officia, incidunt sequi! Nesciunt natus saepe cum ad distinctio nisi.
+                    </p>
+                </div>
+                <div class="col-2 border border-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nihil ex vitae veritatis unde quia
+                        facere minima magnam provident reiciendis?</p>
+                </div>
+                <div class="col-2 border border-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio reiciendis eius assumenda, quos
+                        dolores fuga quo. Possimus laudantium illo excepturi?</p>
+                </div>
+                <div class="col-3 border border-2">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga recusandae voluptate molestiae
+                        soluta dignissimos non et nulla quisquam animi rerum?</p>
+                </div>
+
+            </div>
         </div>
 
     </div>
