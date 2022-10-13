@@ -1,0 +1,28 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+.achtergrond{
+    background: #c7ced8;
+    padding: 20px;
+}
+.puntenlijst {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    width: 15%;
+    border: 1px solid black;
+}
+
+th {
+    background-color: #27426d;
+    font-weight: normal;
+}
+tbody tr:nth-child(2n+1){
+    background-color: #6facff;
+}
+tbody tr:nth-child(2n){
+    background-color: #4f8cef;
+}
