@@ -1,11 +1,16 @@
 const platform = '../dino/assets/platform.png'
+const blachtergrond = '../dino/assets/background.png'
+const bergen = '../dino/assets/hills.png'
 const canvas = document.querySelector(
     'canvas'
 )
 const c = canvas.getContext('2d')
 
-canvas.width = window.innerWidth
-canvas.height = window.innerHeight
+// canvas.width = window.innerWidth
+// canvas.height = window.innerHeight
+canvas.width = 1024
+canvas.height = 576
+
 
 const gravity = .5
 
@@ -27,7 +32,7 @@ class Player {
     }
 
     draw() {
-        c.fillStyle = '#397006'
+        c.fillStyle = '#aee6bd'
         c.fillRect(this.position.x,
             this.position.y,
             this.width,
@@ -48,8 +53,6 @@ class Player {
     }
 }
 
-
-
 //Platform klasse maken
 class Platform {
     constructor(x, y) {
@@ -64,7 +67,7 @@ class Platform {
     }
     draw() {
         //foto inladen
-        var image = new Image()
+        let image = new Image()
         image.src = platform
         // foto gebruiken
         c.drawImage(image, this.position.x, this.position.y)
@@ -79,11 +82,50 @@ class Platform {
     }
 }
 
-// Player en Platformen initialiseren
+// Decoratie klasse maken
+class GenericObject {
+    constructor(x, y, img) {
+        this.position = {
+            x,
+            y
+        }
+
+        this.height = canvas.height
+        this.width = canvas.width
+        this.img = img
+    }
+    draw() {
+        //foto inladen
+        let image = new Image()
+        image.src = this.img
+        // foto gebruiken
+        c.drawImage(image, this.position.x, this.position.y)
+
+
+        // Vaste kleur
+        // c.fillStyle = '#063970'
+        // c.fillRect(this.position.x,
+        //     this.position.y,
+        //     this.width,
+        //     this.height)
+    }
+}
+
+const wd = 578
+// Player, Platformen en achtergronden initialiseren
 const player = new Player()
-const platforms = [new Platform({ x: 100, y: 200 }),
-new Platform(1000, 200),
-new Platform(2000, 200)
+const platforms = [new Platform(0, 470)]
+
+for (let i = 1; i < 11; i++) {
+    // nieuwe platforms toevoegen
+    platforms.push(new Platform(wd * i + 100, 470));
+}
+
+const GenericObjects = [
+    new GenericObject(-1, -1, blachtergrond),
+    new GenericObject(-1, -1, bergen),
+    new GenericObject(2000, -1, bergen),
+    new GenericObject(900, -1, bergen)
 ]
 
 
@@ -106,6 +148,9 @@ function animatie() {
     requestAnimationFrame(animatie)
     c.fillStyle = 'white'
     c.fillRect(0, 0, canvas.width, canvas.height)
+    GenericObjects.forEach((GenericObject) => {
+        GenericObject.draw()
+    })
     platforms.forEach((platform) => {
         platform.draw()
     })
@@ -124,18 +169,22 @@ function animatie() {
         player.velocity.x = 0
         // als player tegen de rechtermuur zit
         if (keys.right.pressed) {
+            scrollOffset -= vel
             platforms.forEach((platform) => {
                 platform.position.x -= vel
-                scrollOffset -= vel
             })
-
-        } else if (keys.left.pressed) {
+            GenericObjects.forEach(GenericObject =>{
+                GenericObject.position.x -= 3
+            })
+        } else if (keys.left.pressed && scrollOffset < 0) {
             // player tegen de linker muur
+            scrollOffset += vel
             platforms.forEach((platform) => {
                 platform.position.x += vel
-                scrollOffset += vel
             })
-
+            GenericObjects.forEach((GenericObject) =>{
+                GenericObject.position.x += 3
+            })
         }
     }
 
@@ -150,49 +199,15 @@ function animatie() {
             player.position.y + player.height + player.velocity.y >= platform.position.y &&
             player.position.x + player.width >= platform.position.x &&
             player.position.x <= platform.position.x + platform.width) {
-
+                console.log('val')
             player.velocity.y = 0
         }
     })
 
-    /*       // platform collision detection y-bot
-          platforms.forEach((platform) => {
-              if (player.position.y + player.height <= platform.position.y + platform.height &&
-                  player.position.y + player.height + player.velocity.y >= platform.position.y + platform.height &&
-                  player.position.x + player.width >= platform.position.x &&
-                  player.position.x <= platform.position.x + platform.width) {
-      
-                  player.velocity.y = 0
-              }
-          }) */
-
-    // platform collision detection x-left -werkt
-    platforms.forEach((platform) => {
-        if (player.position.x + player.width <= platform.position.x &&
-            player.position.x + player.width + player.velocity.x >= platform.position.x &&
-            player.position.y + player.height >= platform.position.y &&
-            player.position.y <= platform.position.y + platform.height) {
-
-            player.velocity.x = 0
-        }
-    })
-
-    // platform collision detection x-right
-    platforms.forEach((platform) => {
-        if (player.position.x + player.width <= platform.position.x &&
-            player.position.x + player.width + player.velocity.x >= platform.position.x &&
-            player.position.y + player.height >= platform.position.y &&
-            player.position.y <= platform.position.y + platform.height) {
-
-            player.velocity.x = 0
-        }
-    })
-
-
     // win situatie
-    if (scrollOffset == -2000) {
-        alert('yeet')
-    }
+    // if (scrollOffset == -2000) {
+    //     alert('yeet')
+    // }
 }
 animatie()
 
