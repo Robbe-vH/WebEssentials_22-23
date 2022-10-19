@@ -30,6 +30,15 @@ body {
       min-height: 800px;
     }
 
+    .zijbalk .hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #F0F1F2;
+      margin: 10px 15px;
+      padding: 0;
+    }
+
       .zijbalk h1 {
         text-shadow: 0px 2px 3px #2b2b2b;
         color: #A7ABF2;
@@ -149,29 +158,55 @@ body {
           display: inline;
         }
 
-      .hr {
-        display: block;
-        height: 1px;
-        border: 0;
-        border-top: 1px solid #F0F1F2;
-        margin: 10px 15px;
-        padding: 0;
-      }
     
 
   .resume{
     display: flex;
+    flex-direction: column;
     color: #2b2b2b;
     width: 75%;
     background-color: #F0F1F2;
     padding: 5%;
   }
     .resume p {
-      display: inline;
       color: #2b2b2b;
     }
 
-    .resume .hr{
+    .resume h1 {
+      font-family: 'Ubuntu', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    .resume .hr {
       border-top: 2px solid #2b2b2b;
       margin-left: 0;
     }
+
+    .beschrijving, .werkervaring {
+      margin: 5% 0;
+    }
+
+    .werkervaring h1 {
+      text-align: end;
+    }
+
+    .hardsk{
+      display: flex;
+      flex-direction: column;
+    }
+
+      .skillbalk {
+        height: 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        background-color: #2b2b2b;
+      }
+
+      .skillload {
+        text-align: center;
+        color: #F0F1F2;
+        height: 20px;
+        width: 0%;
+        border-radius: 10px;
+        background-color: #5259D9;
+      }

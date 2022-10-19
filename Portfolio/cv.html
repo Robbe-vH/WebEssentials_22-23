@@ -20,6 +20,8 @@
 
 <body>
     <div class="container">
+        <!-- Gekleurde zijblak -->
+
         <div class="zijbalk">
             <div class="fotoblok">
                 <img class="profielfoto" src="https://picsum.photos/300" alt="Profielfoto" />
@@ -53,6 +55,7 @@
                 <div class="skill">
                     <h4>Talking to Customers</h4>
                     <h4>Planning Projects</h4>
+                    <h4>Leadership</h4>
                     <h4>Stress Resilient</h4>
                 </div>
             </div>
@@ -113,6 +116,8 @@
        -->
 
         </div>
+
+        <!-- Witte pagina met tekst -->
         <div class="resume">
             <div class="beschrijving">
                 <h1>Who am I</h1>
@@ -122,9 +127,116 @@
                     voluptas amet ea nam et totam modi! Eum voluptates accusamus vel natus veniam nisi accusantium.
                     Voluptate, laborum. Nisi ipsam enim est omnis placeat, officiis similique soluta praesentium?</p>
             </div>
+
+
+            <div class="werkervaring">
+                <h1>Job Experiences</h1>
+                <div class="hr"></div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam at
+                    culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos nulla
+                    modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
+                    possimus officiis error quibusdam, aliquam maiores facilis minus.
+                </p>
+
+            </div>
+
+            <div class="hardskills">
+                <h1>Hard Skills</h1>
+                <div class="hr"></div>
+                
+                <!-- Balkjes, ja deze komen half van W3 schools, maar de javascript is wel aangepast naar mijn eigen use case -->
+                <div class="hardsk">
+                    <h3>HTML & CSS</h3>
+                    <div class="skillbalk" onmouseenter="move1()">
+                        <div id="skillbar1" class="skillload"></div>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam at
+                        culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos nulla
+                        modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
+                        possimus officiis error quibusdam, aliquam maiores facilis minus.
+                    </p>
+                </div>
+
+                <div class="hardsk">
+                    <h3>C#</h3>
+                    <div class="skillbalk" onmouseenter="move2()">
+                        <div id="skillbar2" class="skillload"></div>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam at
+                        culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos nulla
+                        modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
+                        possimus officiis error quibusdam, aliquam maiores facilis minus.
+                    </p>
+                </div>
+
+                <div class="hardsk">
+                    <h3>Data & SQL</h3>
+                    <div class="skillbalk" onmouseenter="move3()">
+                        <div id="skillbar3" class="skillload"></div>
+                    </div>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam at
+                        culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos nulla
+                        modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
+                        possimus officiis error quibusdam, aliquam maiores facilis minus.
+                    </p>
+                </div>
+
+               
+
+            </div>
+
         </div>
 
     </div>
 </body>
+
+<script>
+    function move1() {
+        var elem = document.getElementById("skillbar1");
+        var width = elem.style.width;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width < 50) {
+                width++;
+                elem.style.width = width + '%';
+                elem.innerHTML = width + " %";
+            }
+        }
+    }
+
+    function move2() {
+        var elem = document.getElementById("skillbar2");
+        var width = elem.style.width;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width < 25) {
+                width++;
+                elem.style.width = width + '%';
+                elem.innerHTML = width + " %";
+            }
+        }
+    }
+
+
+    function move3() {
+        var elem = document.getElementById("skillbar3");
+        var width = elem.style.width;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (width < 40) {
+                width++;
+                elem.style.width = width + '%';
+                elem.innerHTML = width + " %";
+            }
+        }
+    }
+</script>
 
 </html>
