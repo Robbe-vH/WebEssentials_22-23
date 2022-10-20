@@ -26,6 +26,9 @@
 
 <body>
   <canvas></canvas>
+
+
+
   <script type="module">
     const platform = 'assets/platform.png'
     const blachtergrond = 'assets/background.png'
@@ -40,8 +43,8 @@
 
     // canvas.width = window.innerWidth
     // canvas.height = window.innerHeight
-    canvas.width = 1024
-    canvas.height = 576
+    canvas.width = 1280
+    canvas.height = 720
 
     const gravity = .5
 
@@ -51,14 +54,14 @@
         // locatie
         this.position = {
           x: 100,
-          y: 100
+          y: 400
         }
         // dimensions
         this.velocity = {
           x: 0,
           y: 0
         }
-        this.spd = 10
+        this.spd = 20
         this.width = 50
         this.height = 80
         this.img = img
@@ -141,13 +144,7 @@
     let wd = 578
     let player = new Player(platform)
     let platforms = []
-
-    let GenericObjects = [
-      new GenericObject(-1, -1, blachtergrond),
-      new GenericObject(800, 0, bergen),
-      new GenericObject(2000, 100, bergen),
-      // new GenericObject(4000, 0, bergen)
-    ]
+    let GenericObjects = []
 
     const keys = {
       right: {
@@ -169,24 +166,45 @@
       wd = 578
       player = new Player(dino)
       platforms = [
-        new Platform(0, 470, platform, 125, 580),
-        new Platform(3000, 270, hoogplatform, 1000, 120),
-        new Platform(wd + 400, 470, platform, 125, 580),
-        new Platform(wd * 2 + 400, 470, platform, 125, 580),
-        new Platform(wd * 4, 470, platform, 125, 580)
+        //grond
+        new Platform(0, 600, platform, 125, 580),
+        new Platform(wd + 400, 600, platform, 125, 580),
+        new Platform(wd * 2 + 400, 600, platform, 125, 580),
+        //hogere platformen
+        new Platform(wd * 4, 500, platform, 70, 300),
+        new Platform(wd * 4 + 300, 300, platform, 70, 300),
+
+        new Platform(3000, 400, hoogplatform, 350, 300)
       ]
 
       GenericObjects = [
         new GenericObject(-1, -1, blachtergrond),
-        new GenericObject(800, 0, bergen),
-        new GenericObject(2000, 100, bergen),
+        new GenericObject(800, 200, bergen),
+        new GenericObject(2000, 300, bergen),
         // new GenericObject(4000, 0, bergen)
       ]
       scrollOffset = 0
+      heightOffset = 0
+    }
+
+    function collision() {
+      // platform collision detection y-top -werkt
+      platforms.forEach((platform) => {
+        if (player.position.y + player.height <= platform.position.y &&
+          player.position.y + player.height + player.velocity.y >= platform.position.y &&
+
+          player.position.x + player.width >= platform.position.x &&
+          player.position.x <= platform.position.x + platform.width) {
+          player.velocity.y = 0
+          console.log("stop")
+
+        }
+      })
     }
 
     // animatie loop
     let scrollOffset = 0
+    let heightOffset = 0
     function animatie() {
       requestAnimationFrame(animatie)
       c.fillStyle = 'white'
@@ -198,6 +216,7 @@
         platform.draw()
       })
       player.update()
+      collision()
 
 
       // links rechts movement
@@ -209,16 +228,19 @@
 
       } else {
         player.velocity.x = 0
+
         // als player tegen de rechtermuur zit
         if (keys.right.pressed) {
           scrollOffset -= player.spd
           platforms.forEach((platform) => {
             platform.position.x -= player.spd
           })
+
           GenericObjects.forEach(GenericObject => {
             GenericObject.position.x -= player.spd * 0.5
           })
         } else if (keys.left.pressed && scrollOffset < 0) {
+
           // player tegen de linker muur
           scrollOffset += player.spd
           platforms.forEach((platform) => {
@@ -228,36 +250,43 @@
             GenericObject.position.x += player.spd * 0.5
           })
         }
+
+        //verticaal scrollen
+        heightOffset = player.velocity.y
+        console.log(heightOffset)
+        if (player.position.y < 400) {
+          
+          platforms.forEach((platform) => {
+            platform.position.y -= heightOffset
+            collision()
+            console.log(platform.position.y)
+            
+          })
+          // platforms.forEach((platform) => {
+          //   platform.position.y -= 1
+            
+            
+          //   collision()
+          //   console.log(platform.position.y)
+            
+          // })
+          // player.position.y -=1
+          
+        }
       }
 
 
-
-
-      // platform collision detection y-top -werkt
-      let staOpGrond = false
-      platforms.forEach((platform) => {
-        if (player.position.y + player.height <= platform.position.y &&
-          player.position.y + player.height + player.velocity.y >= platform.position.y &&
-          player.position.x + player.width >= platform.position.x &&
-          player.position.x <= platform.position.x + platform.width) {
-          player.velocity.y = 0
-          staOpGrond = true
-          setTimeout(function () { staOpGrond = false }, 50)
-        }
-      })
-      console.log(staOpGrond);
       // springen
-      if (keys.up.pressed && staOpGrond) {
+      if (keys.up.pressed && player.velocity.y == 0) {
         player.velocity.y -= 10
       }
-      // console.log('x-positie: ' + (Math.abs(scrollOffset) + player.position.x));
 
       // win situaties
       if (3540 > (player.position.x + Math.abs(scrollOffset)) && (player.position.x + Math.abs(scrollOffset)) > 3000 && keys.enter.pressed) {
         console.log('win')
       }
 
-      // opnieuw spelen
+      // dood => restart
       if (player.position.y > canvas.height) {
         Init()
       }
