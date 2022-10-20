@@ -6,6 +6,8 @@
 #F0F1F2 */
 
 
+
+
 body {
   font-family: "Roboto", sans-serif;
   color: #F0F1F2;
@@ -209,4 +211,25 @@ body {
         width: 0%;
         border-radius: 10px;
         background-color: #5259D9;
+      }
+
+
+      @media only screen and (max-width: 600px) {
+        .zijbalk, .container, .resume {
+          width: 100%;
+        }
+
+        .container {
+          margin: 0;
+          flex-direction: column;
+        }
+
+        .resume {
+          padding: 0;
+        }
+
+        .beschrijving, .werkervaring, .hardskills {
+          margin: 10px;
+        }
+
       }
