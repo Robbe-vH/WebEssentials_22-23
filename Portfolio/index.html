@@ -29,23 +29,19 @@
             <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
                     <h1>Portfolio</h1>
                 </a> </li>
-            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
-                    <h1>Yeet</h1>
-                </a></li>
-            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
-                    <h1>Uw moeder</h1>
+            <li id="baritem"><a href="./404.html">
+                    <h1>Contact</h1>
                 </a></li>
         </ul>
     </nav>
 
-    <div class="topnav">
-        <a href="#home" class="active">Logo</a>
-        <div id="myLinks">
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+    <div class="mobielnav">
+        <a href="./404.html/" class="logobar">Robbe vH</a>
+        <div id="items">
+            <a href="./404.html">Contact Form</a>
+            <a href="https://www.pxl.be/">PXL Website</a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a id="burger" class="icon" onclick="dropdown()">
             <em class="fa fa-bars"></em>
         </a>
     </div>
@@ -230,6 +226,7 @@
 </body>
 
 <script>
+    //hard skill balkjes
     function move1() {
         var elem = document.getElementById("skillbar1");
         var width = elem.style.width;
@@ -256,7 +253,6 @@
         }
     }
 
-
     function move3() {
         var elem = document.getElementById("skillbar3");
         var width = elem.style.width;
@@ -271,15 +267,40 @@
     }
 
    // navbar
+    function dropdown() {
+        var x = document.getElementById("items");
+        var b = document.getElementById("burger");
 
-    function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-            x.style.display = "none";
+        if (x.style.height === "120px") {
+            console.log("Close")
+
+            x.style.height = "0px"
+            b.style.background = "#4d4d4d";
         } else {
-            x.style.display = "block";
-        }
+            console.log("Open")
+            
+            x.style.height = "120px"
+            b.style.background = "#5259D9";
+        }  
+
+        // var elem = document.getElementById("myLinks");
+        // var height = elem.style.height;
+        // var id = setInterval(frame, 1);
+        // function frame() {
+        //     if (height <= 120) {
+        //         height++;
+        //         console.log(height)
+        //         elem.style.height = height + 'px';
+        //     } else if (height > 120){
+        //         height--;
+        //         elem.style.height = height + 'px';
+        //     }
+        // }
+
     }
+
+
+    
 
 </script>
 

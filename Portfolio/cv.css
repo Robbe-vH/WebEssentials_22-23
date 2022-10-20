@@ -1,9 +1,21 @@
 /* Adobe kleuren
+Donkerblauw:
 #040DBF
+
+blauw:
 #0711D9
+
+lichtblauw:
 #5259D9
+
+lichtpaars:
 #A7ABF2
-#F0F1F2 */
+
+wit:
+#F0F1F2 
+
+grijs:
+#4d4d4d*/
 
 
 
@@ -16,51 +28,48 @@ body {
   font-size: 14px;
 }
 
-
-
 nav {
   background-color: #4d4d4d;
   align-items: center;
 
 }
 
-.topnav {
+.mobielnav {
   width: 100%;
   height: auto;
   display: none;
   overflow: hidden;
-  background-color: #333;
+  background-color: #4d4d4d;
   position: relative;
 }
 
-.topnav #myLinks {
-  display: none;
+.mobielnav #items {
+  height: 0px;
 }
 
-.topnav a {
-  color: white;
-  padding: 14px 16px;
+.mobielnav a {
+  color: #F0F1F2;
+  padding: 20px;
   text-decoration: none;
   font-size: 17px;
   display: block;
 }
 
-.topnav a.icon {
-  background: black;
+.mobielnav a.icon {
+  background-color: #4d4d4d;
   display: block;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+.mobielnav .logobar {
+  background-color: #5259D9;
+  color: #F0F1F2;
 }
 
-.topnav .active {
-  background-color: #04AA6D;
-  color: white;
+nav {
+  box-shadow: 0px 0px 6px #2b2b2b;
 }
 
 nav ul {
@@ -83,8 +92,6 @@ nav li:hover {
   background-color: #5259D9;
   margin: 0;
 }
-
-
 
 nav li a {
   display: block;
@@ -243,7 +250,7 @@ h5 {
   display: inline;
 }
 
-
+/* Resume begint vanaf hier */
 
 .resume {
   display: flex;
@@ -339,7 +346,7 @@ h5 {
     display: none;
   }
 
-  .topnav {
+  .mobielnav {
     display: block;
   }
 }
