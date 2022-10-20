@@ -19,18 +19,41 @@
 </head>
 
 <body>
+
     <!-- navbar -->
     <nav>
         <ul>
-            <li><a href="https://www.pxl.be/"><h1>PXL</h1></a></li>
-            <li><a href="https://portfolio.robbevanhoppe.be/"><h1>Portfolio</h1></a> </li>
-            <li><a href="https://portfolio.robbevanhoppe.be/"><h1>Yeet</h1></a></li>
-            <li><a href="https://portfolio.robbevanhoppe.be/"><h1>Uw moeder</h1></a></li>
+            <li class="logo" id="baritem"><a href="https://www.pxl.be/">
+                    <h1>PXL</h1>
+                </a></li>
+            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
+                    <h1>Portfolio</h1>
+                </a> </li>
+            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
+                    <h1>Yeet</h1>
+                </a></li>
+            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
+                    <h1>Uw moeder</h1>
+                </a></li>
         </ul>
     </nav>
 
+    <div class="topnav">
+        <a href="#home" class="active">Logo</a>
+        <div id="myLinks">
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <em class="fa fa-bars"></em>
+        </a>
+    </div>
+
+
     <!-- blad -->
     <div class="container">
+
         <!-- Gekleurde zijblak -->
         <div class="zijbalk">
             <div class="fotoblok">
@@ -203,6 +226,7 @@
         </div>
 
     </div>
+
 </body>
 
 <script>
@@ -245,6 +269,18 @@
             }
         }
     }
+
+   // navbar
+
+    function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+
 </script>
 
 </html>
