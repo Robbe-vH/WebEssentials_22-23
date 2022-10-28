@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto&family=Ubuntu:wght@500&display=swap"
         rel="stylesheet">
-
+    <!-- Font awesome icoontjes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="./cv.css">
 
     <title>CV - Robbe van Hoppe</title>
@@ -26,19 +27,19 @@
             <li class="logo" id="baritem"><a href="https://www.pxl.be/">
                     <h1>PXL</h1>
                 </a></li>
-            <li id="baritem"><a href="https://portfolio.robbevanhoppe.be/">
+            <li id="baritem"><a href="https://www.robbevanhoppe.be/">
                     <h1>Portfolio</h1>
                 </a> </li>
-            <li id="baritem"><a href="./404.html">
+            <li id="baritem"><a href="https://www.robbevanhoppe.be/">
                     <h1>Contact</h1>
                 </a></li>
         </ul>
     </nav>
-
+    <!-- De mobile versie heeft andere content, dus daarom 2 verschillende -->
     <div class="mobielnav">
-        <a href="./404.html/" class="logobar">Robbe vH</a>
+        <a href="https://www.robbevanhoppe.be/" class="logobar">Robbe vH</a>
         <div id="items">
-            <a href="./404.html">Contact Form</a>
+            <a href="https://www.robbevanhoppe.be/">Contact Form</a>
             <a href="https://www.pxl.be/">PXL Website</a>
         </div>
         <a id="burger" class="icon" onclick="dropdown()">
@@ -266,7 +267,7 @@
         }
     }
 
-   // navbar
+    // navbar
     function dropdown() {
         var x = document.getElementById("items");
         var b = document.getElementById("burger");
@@ -278,10 +279,10 @@
             b.style.background = "#4d4d4d";
         } else {
             console.log("Open")
-            
+
             x.style.height = "120px"
             b.style.background = "#5259D9";
-        }  
+        }
 
         // var elem = document.getElementById("myLinks");
         // var height = elem.style.height;
@@ -300,7 +301,7 @@
     }
 
 
-    
+
 
 </script>
 
