@@ -3,7 +3,7 @@
 // TODO
 ## 1.  Content
     Persoonlijke info
-    behaalde diploma's
+    --behaalde diploma's 
     Foto
 
 ## 2.  Gervraagde functionaliteit
@@ -12,19 +12,19 @@
     achtergrondgfoto :hover box-shadow geven
 
 ## 3. Look & Feel + responsiveness
-    Duidelijk leesbaar
-    Kleuren en lettertypes matchen
+    --Duidelijk leesbaar
+    --Kleuren en lettertypes matchen
     Gepaste profielfoto
 
-    passen de elemenen zich aan aan het scherm
-    goede positionering van divs
-    blijven de teksten en fotos leesbaar
+    --passen de elemenen zich aan aan het scherm
+    --goede positionering van divs
+    --blijven de teksten en fotos leesbaar
 
 ## 4. technische complexiteit
-    Verschillende html elemtenten
-    css selectors
-    pseudoclasses
-    zelf dingen opgezocht
+    --Verschillende html elemtenten
+    --css selectors
+    --pseudoclasses
+    --zelf dingen opgezocht
 
 ## 5. Algemeen
     zijn alle functionaliteiten samenwerkend

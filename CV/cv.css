@@ -109,7 +109,6 @@ nav li a {
   position: relative;
   left: 0vw;
   width: 25%;
-  height: 100%;
   min-height: 800px;
 }
 
@@ -124,7 +123,7 @@ nav li a {
 
 .zijbalk h1 {
   /* text-shadow: 0px 2px 3px #2b2b2b; */
-  color: #F0F1F2 ;
+  color: #F0F1F2;
 }
 
 .zijbalk h3 {
@@ -155,10 +154,21 @@ nav li a {
 }
 
 .profielfoto {
-  box-shadow: 0px 0px 6px #2b2b2b;
   border-radius: 50%;
   height: 80%;
   width: 80%;
+  transition: all 0.3s;
+}
+
+.profielfoto:hover {
+  box-shadow: 0px 0px 6px #2b2b2b;
+  transition: all 0.3s;
+}
+
+.profielfoto:active {
+  box-shadow: 0px 0px 0px;
+  border: 2px solid #F0F1F2;
+  transition: all 0.3s;
 }
 
 /* opleidingblok */
@@ -177,14 +187,11 @@ nav li a {
   align-items: flex-start;
 }
 
-.opl h3,
-.int h3 {
-  
-  color: #A7ABF2;
+.opl>h3 {
+  color: #F0F1F2;
 }
 
-.opl h3,
-h4,
+.opl h4,
 h5 {
   font-family: 'Ubuntu', sans-serif;
   margin: 10px 0;
@@ -207,6 +214,7 @@ h5 {
   flex-direction: row;
   justify-content: space-between;
 }
+
 
 /* skillblokje */
 .skillblok {
@@ -288,6 +296,40 @@ h5 {
 .werkervaring h1 {
   text-align: end;
 }
+.MottigeTabel {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  width: 95%;
+  border: 3px solid #5259D9;
+  margin: 30px 0px;
+  box-shadow: 0px 0px 6px #2b2b2b;
+}
+
+thead > tr {
+  background-color: #5259D9;
+  color: #F0F1F2;
+  text-align: left;
+}
+
+thead th {
+  padding: 15px 10px;
+}
+
+tbody td {
+  padding: 20px 10px;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: #A7ABF2;
+}
+
+tbody tr:hover{
+  color: #5259D9;
+}
 
 .hardsk {
   display: flex;
@@ -346,4 +388,3 @@ h5 {
     display: block;
   }
 }
-
