@@ -192,13 +192,6 @@
                         </tbody>
                     </table>
                 </div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam at
-                    culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos nulla
-                    modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
-                    possimus officiis error quibusdam, aliquam maiores facilis minus.
-                </p>
-
             </div>
 
             <div class="hardskills">
@@ -208,7 +201,7 @@
 
                 <div class="hr"></div>
 
-                <!-- Balkjes, ja deze komen half van W3 schools, maar de javascript is wel aangepast naar mijn eigen use case -->
+                <!-- Balkjes, ja dit design komt van W3 schools, maar de javascript is wel aangepast naar mijn eigen use case -->
                 <div class="hardsk">
                     <h3>HTML & CSS</h3>
                     <div class="skillbalk" onmouseenter="move1()">
@@ -216,12 +209,9 @@
                     </div>
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quo repellendus ratione magnam
-                        at
-                        culpa natus aut animi, officiis doloribus rem, harum unde nobis delectus aliquid dignissimos
-                        nulla
-                        modi ut, illo debitis! Nostrum sint, eveniet sed, eos laborum praesentium odio nobis deserunt
-                        possimus officiis error quibusdam, aliquam maiores facilis minus.
+                        My journey in web design started back in high school, where I was introduced to the basics of
+                        HTML, CSS/SASS, Javascript and PHP. In university, I came into contact with version control
+                        through GIT and learned how to use frameworks like Bootstrap effectively.
                     </p>
                 </div>
 
@@ -268,13 +258,13 @@
 </body>
 
 <script>
-    //hard skill balkjes
+    //hard skill balkjes, waarschijnlijk kon dit in 1 functie, maar geen idee hoe ik dat mooi doe zonder angular
     function move1() {
         var elem = document.getElementById("skillbar1");
         var width = elem.style.width;
         var id = setInterval(frame, 10);
         function frame() {
-            if (width < 50) {
+            if (width < 75) {
                 width++;
                 elem.style.width = width + '%';
                 elem.innerHTML = width + " %";

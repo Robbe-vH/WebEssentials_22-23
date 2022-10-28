@@ -122,7 +122,6 @@ nav li a {
 }
 
 .zijbalk h1 {
-  /* text-shadow: 0px 2px 3px #2b2b2b; */
   color: #F0F1F2;
 }
 
@@ -162,7 +161,6 @@ nav li a {
 
 .profielfoto:hover {
   box-shadow: 0px 0px 6px #2b2b2b;
-  transition: all 0.3s;
 }
 
 .profielfoto:active {
@@ -266,6 +264,7 @@ h5 {
 }
 
 .resume p {
+  line-height: 1.5;
   color: #2b2b2b;
 }
 
@@ -306,6 +305,10 @@ table {
   width: 95%;
   border: 3px solid #5259D9;
   margin: 30px 0px;
+  transition: all 0.3s;
+}
+
+table:hover {
   box-shadow: 0px 0px 6px #2b2b2b;
 }
 
