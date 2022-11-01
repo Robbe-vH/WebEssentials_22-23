@@ -134,7 +134,7 @@
         <div class="resume">
             <div class="beschrijving">
                 <div class="blauwebalk">
-                    <h1>Who am I</h1>
+                    <h1>Who am I?</h1>
                 </div>
 
                 <div class="hr"></div>
@@ -151,7 +151,7 @@
                 </div>
 
                 <div class="hr"></div>
-                <!-- Tabellen zijn meestal de lelijkste oplossing, maar bon -->
+                <!-- Tabellen zijn niet mijn favoriete oplossing, maar oke -->
                 <div class="MottigeTabel">
                     <table>
                         <thead>
@@ -163,27 +163,27 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr onmouseenter="RijTc()">
                                 <td>Thai Cafe</td>
                                 <td>2020 - Now</td>
                                 <td>Driver & Bartender</td>
                             </tr>
-                            <tr>
+                            <tr onmouseenter="RijBpost()">
                                 <td>Bpost</td>
                                 <td>2021 -2021</td>
                                 <td>Student mailman</td>
                             </tr>
-                            <tr>
+                            <tr onmouseenter="RijPauwels()">
                                 <td>Profile Pauwels</td>
                                 <td>2013 - 2019</td>
                                 <td>Bike mechanic</td>
                             </tr>
-                            <tr>
+                            <tr onmouseenter="RijSpeel()">
                                 <td>Speelplein De Boomhut</td>
                                 <td>2021 - 2021</td>
                                 <td>Volunteer caretaker for children with disabilities</td>
                             </tr>
-                            <tr>
+                            <tr onmouseenter="RijKarting()">
                                 <td>Karting Lommel</td>
                                 <td>2017 - 2018</td>
                                 <td>Kart mechanic</td>
@@ -191,7 +191,18 @@
 
                         </tbody>
                     </table>
+
+
                 </div>
+
+                <div class="werkuitleg">
+                    <p id="thaicafe"> yeeeet</p>
+                    <p id="bpost"> bpost</p>
+                    <p id="pauwels">pauwels</p>
+                    <p id="speelplein">speelplein</p>
+                    <p id="karting"> karting</p>
+                </div>
+
             </div>
 
             <div class="hardskills">
@@ -201,7 +212,7 @@
 
                 <div class="hr"></div>
 
-                <!-- Balkjes, ja dit design komt van W3 schools, maar de javascript is wel aangepast naar mijn eigen use case -->
+                <!-- Balkjes, ja dit design komt van W3 schools, maar de javascript is wel zelf geschreven -->
                 <div class="hardsk">
                     <h3>HTML & CSS</h3>
                     <div class="skillbalk" onmouseenter="move1()">
@@ -298,20 +309,112 @@
         }
     }
 
+    // werkervaringen
+    function RijTc() {
+        let thaicafe = document.getElementById("thaicafe")
+        let bpost = document.getElementById("bpost");
+        let pauwels = document.getElementById("pauwels");
+        let speelplein = document.getElementById("speelplein");
+        let karting = document.getElementById("karting");
+
+        if (thaicafe.style.display == "none") {
+            thaicafe.style.display = "block";
+            bpost.style.display = "none";
+            pauwels.style.display = "none";
+            speelplein.style.display = "none";
+            karting.style.display = "none";
+        } else {
+            thaicafe.style.display = "none";
+        }
+    }
+
+    function RijBpost() {
+        
+        let thaicafe = document.getElementById("thaicafe")
+        let bpost = document.getElementById("bpost");
+        let pauwels = document.getElementById("pauwels");
+        let speelplein = document.getElementById("speelplein");
+        let karting = document.getElementById("karting");
+
+        if (bpost.style.display == "none") {
+            thaicafe.style.display = "none";
+            bpost.style.display = "block";
+            pauwels.style.display = "none";
+            speelplein.style.display = "none";
+            karting.style.display = "none";
+        } else {
+            bpost.style.display = "none";
+        }
+    }
+
+    function RijPauwels() {
+        let thaicafe = document.getElementById("thaicafe")
+        let bpost = document.getElementById("bpost");
+        let pauwels = document.getElementById("pauwels");
+        let speelplein = document.getElementById("speelplein");
+        let karting = document.getElementById("karting");
+
+        if (pauwels.style.display == "none") {
+            thaicafe.style.display = "none";
+            bpost.style.display = "none";
+            pauwels.style.display = "block";
+            speelplein.style.display = "none";
+            karting.style.display = "none";
+        } else {
+            pauwels.style.display = "none";
+        }
+    }
+
+    function RijSpeel() {
+        let thaicafe = document.getElementById("thaicafe")
+        let bpost = document.getElementById("bpost");
+        let pauwels = document.getElementById("pauwels");
+        let speelplein = document.getElementById("speelplein");
+        let karting = document.getElementById("karting");
+
+        if (speelplein.style.display == "none") {
+            thaicafe.style.display = "none";
+            bpost.style.display = "none";
+            pauwels.style.display = "none";
+            speelplein.style.display = "block";
+            karting.style.display = "none";
+        } else {
+           speelplein.style.display = "none";
+        }
+    }
+
+    function RijKarting() {
+        let thaicafe = document.getElementById("thaicafe")
+        let bpost = document.getElementById("bpost");
+        let pauwels = document.getElementById("pauwels");
+        let speelplein = document.getElementById("speelplein");
+        let karting = document.getElementById("karting");
+
+        if (karting.style.display == "none") {
+            thaicafe.style.display = "none";
+            bpost.style.display = "none";
+            pauwels.style.display = "none";
+            speelplein.style.display = "none";
+            karting.style.display = "block";
+        } else {
+            karting.style.display = "none";
+        }
+    }
+
     // navbar
     function dropdown() {
         var x = document.getElementById("items");
         var b = document.getElementById("burger");
 
         if (x.style.height === "120px") {
-            console.log("Close")
+            console.log("Close");
 
-            x.style.height = "0px"
+            x.style.height = "0px";
             b.style.background = "#4d4d4d";
         } else {
-            console.log("Open")
+            console.log("Open");
 
-            x.style.height = "120px"
+            x.style.height = "120px";
             b.style.background = "#5259D9";
         }
 

@@ -9,7 +9,7 @@
 ## 2.  Gervraagde functionaliteit
     Tabel voor werkervaring met alternerende achtergrondkleur
     vanuit footer terug naar bovenkant
-    achtergrondgfoto :hover box-shadow geven
+    --achtergrond foto :hover box-shadow geven
 
 ## 3. Look & Feel + responsiveness
     --Duidelijk leesbaar

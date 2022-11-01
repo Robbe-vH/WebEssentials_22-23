@@ -334,6 +334,20 @@ tbody tr:hover{
   color: #5259D9;
 }
 
+.werkuitleg {
+  color: #5259D9;
+}
+
+#thaicafe {
+  display: block;
+}
+
+#bpost, #pauwels, #speelplein, #karting {
+  display: none;
+}
+
+
+
 .hardsk {
   display: flex;
   flex-direction: column;
