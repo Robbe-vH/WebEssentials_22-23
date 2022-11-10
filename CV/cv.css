@@ -30,7 +30,7 @@ body {
 
 .mobielnav {
   width: 100%;
-  height: auto;
+  max-height: 120px;
   display: none;
   overflow: hidden;
   background-color: #4d4d4d;
@@ -334,9 +334,12 @@ tbody tr:hover{
   color: #5259D9;
 }
 
-.werkuitleg {
-  color: #5259D9;
+.werkuitleg p{
+  padding: 30px;
+  font-weight: bold;
+  min-height: 100px;
 }
+
 
 #thaicafe {
   display: block;
@@ -372,6 +375,30 @@ tbody tr:hover{
   justify-content: center;
 }
 
+footer {
+  height: 100px;
+  background-color: #5259D9;
+}
+
+footer a {
+  text-decoration: none;
+  color: #F0F1F2;
+}
+
+.footer-items {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer h2 {
+  text-align: center;
+  margin: 20px;
+  width: 15%;
+}
+
 
 /* telefoon opmaak */
 @media only screen and (max-width: 600px) {
@@ -404,4 +431,8 @@ tbody tr:hover{
   .mobielnav {
     display: block;
   }
+}
+
+@media screen and (min-width: 1920px) {
+  body{font-size: 1.2em;}
 }
