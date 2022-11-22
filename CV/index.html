@@ -134,7 +134,8 @@
                 </div>
 
                 <div class="hr"></div>
-                <p>I would like to describe myself as a person who is always eager to learn and develop his skills.
+                <p>
+                    I would like to describe myself as a person who is always eager to learn and develop his skills.
                     During my free time, I spend a lot of time on Pluralsight learning new skills to add to my set. As a
                     kid, I used to love experimenting with electronics, disassembeling old amplifiers, RC cars and
                     planes and making them into new Frankenstein devices. When I got my first job, most of my money was
@@ -148,7 +149,8 @@
                     Java, OOP in Visual Basic, etc. After completing two years of high school, I dropped out for a non
                     IT-related job which I thought would be giving me enough sattisfaction, but after a couple of years,
                     I noticed I missed programming too much and I enrolled in a undergraduate degree in Programming at
-                    PXL.</p>
+                    PXL.
+                </p>
             </div>
 
 
@@ -281,7 +283,7 @@
                     <p>
                         I am not great with SQL and database structures, but it is a vital part of making basically any
                         sort of website that has to store data. Though I don't really like working with the language, I
-                        am able to do basicv selections, subquerries and functions.
+                        am able to do basic selections, subquerries and functions.
                     </p>
                 </div>
             </div>
@@ -294,162 +296,163 @@
             <!-- <h2>Contact</h2> -->
         </div>
     </footer>
+    <script>
+        //hard skill balkjes, waarschijnlijk kon dit in 1 functie, maar geen idee hoe ik dat mooi doe zonder angular
+        function move1() {
+            var elem = document.getElementById("skillbar1");
+            var width = elem.style.width;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width < 60) {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + " %";
+                }
+            }
+        }
+    
+        function move2() {
+            var elem = document.getElementById("skillbar2");
+            var width = elem.style.width;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width < 25) {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + " %";
+                }
+            }
+        }
+    
+        function move3() {
+            var elem = document.getElementById("skillbar3");
+            var width = elem.style.width;
+            var id = setInterval(frame, 10);
+            function frame() {
+                if (width < 20) {
+                    width++;
+                    elem.style.width = width + '%';
+                    elem.innerHTML = width + " %";
+                }
+            }
+        }
+    
+        // werkervaringen
+        function RijTc() {
+            let thaicafe = document.getElementById("thaicafe")
+            let bpost = document.getElementById("bpost");
+            let pauwels = document.getElementById("pauwels");
+            let speelplein = document.getElementById("speelplein");
+            let karting = document.getElementById("karting");
+    
+            if (thaicafe.style.display == "none") {
+                thaicafe.style.display = "block";
+                bpost.style.display = "none";
+                pauwels.style.display = "none";
+                speelplein.style.display = "none";
+                karting.style.display = "none";
+            } else {
+                thaicafe.style.display = "none";
+            }
+        }
+    
+        function RijBpost() {
+    
+            let thaicafe = document.getElementById("thaicafe")
+            let bpost = document.getElementById("bpost");
+            let pauwels = document.getElementById("pauwels");
+            let speelplein = document.getElementById("speelplein");
+            let karting = document.getElementById("karting");
+    
+            if (bpost.style.display == "none") {
+                thaicafe.style.display = "none";
+                bpost.style.display = "block";
+                pauwels.style.display = "none";
+                speelplein.style.display = "none";
+                karting.style.display = "none";
+            } else {
+                bpost.style.display = "none";
+            }
+        }
+    
+        function RijPauwels() {
+            let thaicafe = document.getElementById("thaicafe")
+            let bpost = document.getElementById("bpost");
+            let pauwels = document.getElementById("pauwels");
+            let speelplein = document.getElementById("speelplein");
+            let karting = document.getElementById("karting");
+    
+            if (pauwels.style.display == "none") {
+                thaicafe.style.display = "none";
+                bpost.style.display = "none";
+                pauwels.style.display = "block";
+                speelplein.style.display = "none";
+                karting.style.display = "none";
+            } else {
+                pauwels.style.display = "none";
+            }
+        }
+    
+        function RijSpeel() {
+            let thaicafe = document.getElementById("thaicafe")
+            let bpost = document.getElementById("bpost");
+            let pauwels = document.getElementById("pauwels");
+            let speelplein = document.getElementById("speelplein");
+            let karting = document.getElementById("karting");
+    
+            if (speelplein.style.display == "none") {
+                thaicafe.style.display = "none";
+                bpost.style.display = "none";
+                pauwels.style.display = "none";
+                speelplein.style.display = "block";
+                karting.style.display = "none";
+            } else {
+                speelplein.style.display = "none";
+            }
+        }
+    
+        function RijKarting() {
+            let thaicafe = document.getElementById("thaicafe")
+            let bpost = document.getElementById("bpost");
+            let pauwels = document.getElementById("pauwels");
+            let speelplein = document.getElementById("speelplein");
+            let karting = document.getElementById("karting");
+    
+            if (karting.style.display == "none") {
+                thaicafe.style.display = "none";
+                bpost.style.display = "none";
+                pauwels.style.display = "none";
+                speelplein.style.display = "none";
+                karting.style.display = "block";
+            } else {
+                karting.style.display = "none";
+            }
+        }
+    
+        // navbar
+        function dropdown() {
+            var x = document.getElementById("items");
+            var b = document.getElementById("burger");
+    
+            if (x.style.height === "120px") {
+                console.log("Close");
+    
+                x.style.height = "0px";
+                b.style.background = "#4d4d4d";
+            } else {
+                console.log("Open");
+    
+                x.style.height = "120px";
+                b.style.background = "#5259D9";
+            }
+        }
+    
+    
+    
+    
+    </script>
 </body>
 
-<script>
-    //hard skill balkjes, waarschijnlijk kon dit in 1 functie, maar geen idee hoe ik dat mooi doe zonder angular
-    function move1() {
-        var elem = document.getElementById("skillbar1");
-        var width = elem.style.width;
-        var id = setInterval(frame, 10);
-        function frame() {
-            if (width < 60) {
-                width++;
-                elem.style.width = width + '%';
-                elem.innerHTML = width + " %";
-            }
-        }
-    }
 
-    function move2() {
-        var elem = document.getElementById("skillbar2");
-        var width = elem.style.width;
-        var id = setInterval(frame, 10);
-        function frame() {
-            if (width < 25) {
-                width++;
-                elem.style.width = width + '%';
-                elem.innerHTML = width + " %";
-            }
-        }
-    }
-
-    function move3() {
-        var elem = document.getElementById("skillbar3");
-        var width = elem.style.width;
-        var id = setInterval(frame, 10);
-        function frame() {
-            if (width < 20) {
-                width++;
-                elem.style.width = width + '%';
-                elem.innerHTML = width + " %";
-            }
-        }
-    }
-
-    // werkervaringen
-    function RijTc() {
-        let thaicafe = document.getElementById("thaicafe")
-        let bpost = document.getElementById("bpost");
-        let pauwels = document.getElementById("pauwels");
-        let speelplein = document.getElementById("speelplein");
-        let karting = document.getElementById("karting");
-
-        if (thaicafe.style.display == "none") {
-            thaicafe.style.display = "block";
-            bpost.style.display = "none";
-            pauwels.style.display = "none";
-            speelplein.style.display = "none";
-            karting.style.display = "none";
-        } else {
-            thaicafe.style.display = "none";
-        }
-    }
-
-    function RijBpost() {
-
-        let thaicafe = document.getElementById("thaicafe")
-        let bpost = document.getElementById("bpost");
-        let pauwels = document.getElementById("pauwels");
-        let speelplein = document.getElementById("speelplein");
-        let karting = document.getElementById("karting");
-
-        if (bpost.style.display == "none") {
-            thaicafe.style.display = "none";
-            bpost.style.display = "block";
-            pauwels.style.display = "none";
-            speelplein.style.display = "none";
-            karting.style.display = "none";
-        } else {
-            bpost.style.display = "none";
-        }
-    }
-
-    function RijPauwels() {
-        let thaicafe = document.getElementById("thaicafe")
-        let bpost = document.getElementById("bpost");
-        let pauwels = document.getElementById("pauwels");
-        let speelplein = document.getElementById("speelplein");
-        let karting = document.getElementById("karting");
-
-        if (pauwels.style.display == "none") {
-            thaicafe.style.display = "none";
-            bpost.style.display = "none";
-            pauwels.style.display = "block";
-            speelplein.style.display = "none";
-            karting.style.display = "none";
-        } else {
-            pauwels.style.display = "none";
-        }
-    }
-
-    function RijSpeel() {
-        let thaicafe = document.getElementById("thaicafe")
-        let bpost = document.getElementById("bpost");
-        let pauwels = document.getElementById("pauwels");
-        let speelplein = document.getElementById("speelplein");
-        let karting = document.getElementById("karting");
-
-        if (speelplein.style.display == "none") {
-            thaicafe.style.display = "none";
-            bpost.style.display = "none";
-            pauwels.style.display = "none";
-            speelplein.style.display = "block";
-            karting.style.display = "none";
-        } else {
-            speelplein.style.display = "none";
-        }
-    }
-
-    function RijKarting() {
-        let thaicafe = document.getElementById("thaicafe")
-        let bpost = document.getElementById("bpost");
-        let pauwels = document.getElementById("pauwels");
-        let speelplein = document.getElementById("speelplein");
-        let karting = document.getElementById("karting");
-
-        if (karting.style.display == "none") {
-            thaicafe.style.display = "none";
-            bpost.style.display = "none";
-            pauwels.style.display = "none";
-            speelplein.style.display = "none";
-            karting.style.display = "block";
-        } else {
-            karting.style.display = "none";
-        }
-    }
-
-    // navbar
-    function dropdown() {
-        var x = document.getElementById("items");
-        var b = document.getElementById("burger");
-
-        if (x.style.height === "120px") {
-            console.log("Close");
-
-            x.style.height = "0px";
-            b.style.background = "#4d4d4d";
-        } else {
-            console.log("Open");
-
-            x.style.height = "120px";
-            b.style.background = "#5259D9";
-        }
-    }
-
-
-
-
-</script>
 
 </html>

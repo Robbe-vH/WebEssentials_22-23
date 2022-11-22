@@ -295,6 +295,8 @@ h5 {
 .werkervaring h1 {
   text-align: end;
 }
+
+/* tabel opmaak */
 .MottigeTabel {
   display: flex;
   justify-content: center;
@@ -326,6 +328,7 @@ tbody td {
   padding: 20px 10px;
 }
 
+/* alternerende opmaak */
 tbody > tr:nth-of-type(even) {
   background-color: #A7ABF2;
 }
